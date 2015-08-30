@@ -1,9 +1,14 @@
 function loadUsers(usersIds, load, done) {
+  var completed = 0;
   var users = [];
-  for (var i = 0; i < usersIds.length; i++) {
-    users.push(load(usersIds[i]));
-  }
-  return users;
+  usersIds.forEach(function(id, index) {
+    load(id, function(user) {
+      users[index] = user;
+      if (++completed === usersIds.length) {
+        return done(users);
+      }
+    });
+  });
 }
 
 module.exports = loadUsers;
