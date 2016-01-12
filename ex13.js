@@ -1,17 +1,17 @@
 function repeat(operation, num) {
   if (num < 10) {
-    return;
+    return
   }
 
-  operation();
+  operation()
 
   if (num % 10 === 0) {
     setTimeout(function() {
-      repeat(operation, --num);
-    });
+      repeat(operation, --num)
+    })
   } else {
-    repeat(operation, --num);
+    repeat(operation, --num)
   }
 }
 
-module.exports = repeat;
+module.exports = repeat
