@@ -1,10 +1,10 @@
 function repeat(operation, num) {
   if (num <= 0) {
-    return;
+    return
   }
 
-  operation();
-  return repeat(operation, --num);
+  operation()
+  return repeat(operation, --num)
 }
 
-module.exports = repeat;
+module.exports = repeat
