@@ -1,10 +1,10 @@
 function doubleAll(numbers) {
-  var result = [];
+  var result = []
   numbers.map(function(i) {
-    result.push(i * 2);
-  });
+    result.push(i * 2)
+  })
 
-  return result;
+  return result
 }
 
-module.exports = doubleAll;
+module.exports = doubleAll
